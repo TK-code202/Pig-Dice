@@ -1,4 +1,2 @@
 
-
-
 // Selecting elements
