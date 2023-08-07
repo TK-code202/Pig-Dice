@@ -7,9 +7,51 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.7.0.js"></script>
     <script src="js/script.js"></script>
+    <link rel="icon" href="img/dice-6.jpg">
     <title>Pig Dice</title>
 </head>
 <body>
-    
+    <div class="containerfluid">
+        <div class="container">
+            <h2 class="text-center text-primary">🎲Pig Dice</h2>
+            <div class="card">
+                <h4 id="statement" class="text-center text-primary"></h4>
+                <div class="row p-3">
+                    <div class="col player--0 text-center ">
+                        <h3>PLAYER 1</h3>
+                        <h1 class="text-warning scores" id="score--0">
+                            0
+                        </h1>
+                        
+                        <div class="current bg-info py-4 rounded">
+                            <h5>Current Score</h5>
+                            <h1  id="current--0">0</h1>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <button class="btn btn-primary mb-2 btn--new">New Game</button>
+                        <img src="img/dice-six.png" alt="" class="dice">
+                        <div class="d-grid control-buttons">
+                            <button class="btn btn-success my-4 roll-btn">Roll</button>
+
+                            <button class="btn btn-info hold-btn">Hold</button>
+                        </div>
+                    </div>
+                    <div class="col player--1 text-center">
+                        <h3>PLAYER 2</h3>
+
+                        <h1 class="text-warning scores" id="score--1">
+                            0
+                        </h1>
+
+                        <div class="current bg-info py-4  rounded">
+                            <h5>Current Score</h5>
+                            <h1  id="current--1">0</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
