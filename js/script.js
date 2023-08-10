@@ -1,6 +1,4 @@
 
-//  "use strict";
-
 $(document).ready(function () {
   // Selecting elements
   const player0 = document.querySelector(".player--0");
@@ -11,7 +9,6 @@ $(document).ready(function () {
   const current1 = document.getElementById("current--1");
 
   const diceImg = document.querySelector(".dice");
-  // const btnNew = document.querySelector('.btn--new');
   const btnRoll = document.querySelector(".roll-btn");
   const btnHold = document.querySelector(".hold-btn");
   const statement = document.getElementById("statement");
@@ -23,7 +20,6 @@ $(document).ready(function () {
   const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     currentScore = 0; 
-    // activePlayer = activePlayer === 0 ? 1 : 0;
     if (activePlayer === 0) {
       activePlayer = 1;
     } else {
@@ -40,8 +36,7 @@ $(document).ready(function () {
       const dice = Math.floor(Math.random() * 6) + 1;
 
       // 2. Display dice
-      // diceImg.classList.remove('hidden');
-      diceImg.src = `dice-${dice}.png`;
+      diceImg.src = `./img/dice-${dice}.png`;
 
       // 3. Check for rolled 1
       if (dice !== 1) {
@@ -71,7 +66,6 @@ $(document).ready(function () {
       if (scores[activePlayer] >= 100) {
         // Finish the game
         playing = false;
-        // diceImg.classList.add('hidden');
 
         document
           .querySelector(`.player--${activePlayer}`)
@@ -104,7 +98,6 @@ $(document).ready(function () {
     current1.textContent = 0;
     statement.textContent = null;
 
-    // diceImg.classList.add('hidden');
     player0.classList.remove("player--winner");
     player1.classList.remove("player--winner");
     player0.classList.add("player--active");
