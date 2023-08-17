@@ -1,6 +1,6 @@
 # _Pig Dice_
 
-#### _An application based on the pig dice game where players compete to get up to a certain number by taking turns in rolling a die multiple times and summing the outcomes of each roll._
+#### _A game in which players compete to get their total score up to a certain number by taking turns in rolling a die multiple times and summing the outcomes of each roll._
 
 #### By _**Tofunmi Kusimo**_
 
