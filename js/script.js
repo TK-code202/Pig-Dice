@@ -12,14 +12,14 @@ $(document).ready(function () {
   const btnRoll = document.querySelector(".roll-btn");
   const btnHold = document.querySelector(".hold-btn");
   const statement = document.getElementById("statement");
-        
+
 
   let scores, currentScore, activePlayer, playing;
 
 
   const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0; 
+    currentScore = 0;
     if (activePlayer === 0) {
       activePlayer = 1;
     } else {
@@ -51,8 +51,8 @@ $(document).ready(function () {
     }
   });
 
-  
-// Hold Button functionality
+
+  // Hold Button functionality
   btnHold.addEventListener("click", function () {
     if (playing) {
       // Add current score to active player's score
@@ -74,11 +74,11 @@ $(document).ready(function () {
           .querySelector(`.player--${activePlayer}`)
           .classList.remove("player--active");
 
-          if (activePlayer === 0) {
-            statement.textContent = "Player 1 is the winner";
-          } else {
-            statement.textContent = "Player 2 is the winner";
-          }
+        if (activePlayer === 0) {
+          statement.textContent = "Player 1 is the winner";
+        } else {
+          statement.textContent = "Player 2 is the winner";
+        }
       } else {
         //Switch to the next player
         switchPlayer();
