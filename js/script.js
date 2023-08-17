@@ -32,13 +32,13 @@ $(document).ready(function () {
   // Rolling dice functionality
   btnRoll.addEventListener("click", function () {
     if (playing) {
-      // 1. Generating a random dice roll
+      // Generating a random dice roll
       const dice = Math.floor(Math.random() * 6) + 1;
 
-      // 2. Display dice
+      // Display dice
       diceImg.src = `./img/dice-${dice}.png`;
 
-      // 3. Check for rolled 1
+      // Check for rolled 1
       if (dice !== 1) {
         // Add dice to current score
         currentScore += dice;
@@ -52,17 +52,17 @@ $(document).ready(function () {
   });
 
   
-
+// Hold Button functionality
   btnHold.addEventListener("click", function () {
     if (playing) {
-      // 1. Add current score to active player's score
+      // Add current score to active player's score
       scores[activePlayer] += currentScore;
       // scores[1] = scores[1] + currentScore
 
       document.getElementById(`score--${activePlayer}`).textContent =
         scores[activePlayer];
 
-      // 2. Check if player's score is >= 100
+      // Check if player's score is >= 100
       if (scores[activePlayer] >= 100) {
         // Finish the game
         playing = false;
@@ -80,13 +80,14 @@ $(document).ready(function () {
             statement.textContent = "Player 2 is the winner";
           }
       } else {
-        // Switch to the next player
+        //Switch to the next player
         switchPlayer();
       }
     }
   });
 
   // Starting conditions
+  //Start Game Functionality
   const init = function () {
     scores = [0, 0];
     currentScore = 0;
@@ -105,6 +106,7 @@ $(document).ready(function () {
   };
   init();
 
+  //New Game
   $(".btn--new").click(function () {
     init();
   });
